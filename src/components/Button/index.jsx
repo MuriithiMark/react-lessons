@@ -6,18 +6,17 @@ class Button_class_component extends Component {
     super();
     this.state = {
       count: 0,
+      countText: 0,
     };
+
+    this.increment = this.increment.bind(this);
   }
+
   increment() {
-    this.setState({ count: 3})
+    this.setState({ count: this.state.count + 1 });
   }
 
   render() {
-    function Add() {
-      console.log("Rendering Done!");
-    }
-    Add();
-
     const { btnName, btnColor } = this.props;
     return (
       <div>
@@ -25,6 +24,7 @@ class Button_class_component extends Component {
         <button className={btnColor} onClick={this.increment}>
           {btnName}
         </button>
+        <input type="text" name="initialCount"value={this.state.countText} onChange={(event) => this.setState({ countText: event.target.value})} />
       </div>
     );
   }
