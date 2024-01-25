@@ -20,8 +20,8 @@ const Ancestor = () => {
       if (event.key === "-" && event.shiftKey) {
         handleDecrement();
       }
+      console.log("madness");
     });
-    console.log("madness");
   });
 
   return (
