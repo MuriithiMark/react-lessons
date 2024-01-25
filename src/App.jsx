@@ -1,16 +1,12 @@
-import { useState } from 'react'
-import './App.css'
-import Button_component, { Button_class_component } from './components/Button'
+import "./App.css";
+import ToggleComp from "./components/ToggleComp";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-   <>
-   <Button_class_component btnName="Class Btn" btnColor="red" />
-   <Button_component btnName="Func Btn" btnColor="blue"  />
-   </>
-  )
+    <>
+      <ToggleComp />
+    </>
+  );
 }
 
-export default App
+export default App;
