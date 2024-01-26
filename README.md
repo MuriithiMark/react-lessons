@@ -9,7 +9,8 @@ The bar changes when the input is changed
 ## Issues
 
 I had an issue with styling of the background of the moving progress bar.
-The Backgroud has a varying gradient from red to pink, moving left to right
+The Backgroud has a varying gradient from red to pink, moving left to right.
+
 To solve this use linear-gradient css function
 ```css
 background-image: linear-gradient(to right, red, pink);
