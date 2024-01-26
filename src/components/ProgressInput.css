@@ -1,0 +1,21 @@
+.progress-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+
+    input {
+        width: 16%;
+        height: 40px;
+        padding: 10px;
+        border-radius: 40px;
+        background-color: white;
+        color: black;
+        font-size: x-large;
+    }
+
+   .title {
+    font-size: xx-large;
+   } 
+}

@@ -1,16 +1,20 @@
-import { useState } from 'react'
-import './App.css'
-import Button_component, { Button_class_component } from './components/Button'
+import { useState } from "react";
+import "./App.css";
+import ProgressBar from "./components/ProgressBar";
+import ProgressInput from "./components/ProgressInput";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [progress, setProgress] = useState(0);
+  const handleChange = (event) => {
+    setProgress(event.target.value);
+  };
   return (
-   <>
-   <Button_class_component btnName="Class Btn" btnColor="red" />
-   <Button_component btnName="Func Btn" btnColor="blue"  />
-   </>
-  )
+    <>
+      <h1>Progress bar</h1>
+      <ProgressBar progress={progress} />
+      <ProgressInput value={progress} onChange={handleChange} />
+    </>
+  );
 }
 
-export default App
+export default App;

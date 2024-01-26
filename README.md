@@ -1,8 +1,12 @@
-# React + Vite
+# Progress Bar Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Preview
+![Preview of App](https://github.com/MuriithiMark/)
 
-Currently, two official plugins are available:
+## Issues
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I had an issue with styling of the background of the moving progress bar.
+The Backgroud has a varying from red to pink, to solve this
+```css
+background-image: linear-gradient(to right, red, pink);
+```
