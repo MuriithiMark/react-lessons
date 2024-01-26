@@ -4,7 +4,7 @@ This is app with a progress bar component.
 The bar changes when the input is changed
 
 ## Preview
-![Preview of App](https://github.com/MuriithiMark/react-lessons/blob/progress-bar-component/preview.gif)
+![Preview of App](https://github.com/MuriithiMark/react-lessons/blob/progress-bar-component/preview.png)
 
 ## Issues
 
