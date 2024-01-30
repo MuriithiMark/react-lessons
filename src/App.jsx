@@ -1,16 +1,26 @@
-import { useState } from 'react'
-import './App.css'
-import Button_component, { Button_class_component } from './components/Button'
+import { useRef } from "react";
+import "./App.css";
+import UseReducerComponent from "./components/additional-hooks/useReducer/UseReducerComponent";
+import UseRefComponent from "./components/additional-hooks/useRef/UseRefComponent";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const docRef = useRef();
 
   return (
-   <>
-   <Button_class_component btnName="Class Btn" btnColor="red" />
-   <Button_component btnName="Func Btn" btnColor="blue"  />
-   </>
-  )
+    <>
+      <div
+        style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", columnGap: "20px" }}
+        ref={docRef}
+      >
+        {Array(40)
+          .fill(1)
+          .map((num, idx) => (
+            <UseReducerComponent key={num + idx} />
+          ))}
+      </div>
+      <UseRefComponent docRef={docRef} />
+    </>
+  );
 }
 
-export default App
+export default App;
