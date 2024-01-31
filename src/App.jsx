@@ -1,16 +1,20 @@
-import { useState } from 'react'
-import './App.css'
-import Button_component, { Button_class_component } from './components/Button'
+import "./App.css";
+import UserContextProvider from "./contexts/UserContext.provider";
+import Login from "./components/Login";
+import Profile from "./components/Profile";
+import SolvingPropsDrillingWithContext from "./components/SolvingPropsDrillingWithContext";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-   <>
-   <Button_class_component btnName="Class Btn" btnColor="red" />
-   <Button_component btnName="Func Btn" btnColor="blue"  />
-   </>
-  )
+    <>
+      <UserContextProvider>
+        <Login />
+        <Profile />
+      </UserContextProvider>
+
+      <SolvingPropsDrillingWithContext />
+    </>
+  );
 }
 
-export default App
+export default App;
