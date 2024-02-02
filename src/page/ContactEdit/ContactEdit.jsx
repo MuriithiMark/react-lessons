@@ -2,6 +2,7 @@ import React from "react";
 import { useLoaderData, redirect, Form } from "react-router-dom";
 import { getContact, updateContact } from "../../contacts";
 import "./contact-edit.css";
+import { useNavigate } from "react-router-dom";
 
 export const loader = async ({ params }) => {
   const contact = await getContact(params.contactId);
@@ -17,6 +18,8 @@ export const action = async ({ request, params }) => {
 
 const ContactEdit = () => {
   const { contact } = useLoaderData();
+  const navigate = useNavigate();
+
   return (
     <Form method="post" id="contact-form">
       <p className="name">
@@ -63,7 +66,13 @@ const ContactEdit = () => {
       </label>
       <p>
         <button type="submit">Save</button>
-        <button type="button" style={{ color: "red" }}>
+        <button
+          type="button"
+          style={{ color: "red" }}
+          onClick={() => {
+            navigate(-1);
+          }}
+        >
           Cancel
         </button>
       </p>
