@@ -1,8 +1,10 @@
 .products {
     margin-top: 4em;
+    width: 100%;
     display: flex;
     flex-flow: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .product {
@@ -32,4 +34,11 @@
     border-radius: .4em;
 
     justify-self: center;
+}
+
+@media screen and (max-width: 500px) {
+    .product {
+        margin: 0;
+        margin-bottom: 2em;
+    }
 }
