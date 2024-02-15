@@ -1,16 +1,17 @@
-import { useState } from 'react'
-import './App.css'
-import Button_component, { Button_class_component } from './components/Button'
+import { useState } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import ProductsComponent from "./components/ProductsComponent";
+import CartComponent from "./components/CartComponent";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-   <>
-   <Button_class_component btnName="Class Btn" btnColor="red" />
-   <Button_component btnName="Func Btn" btnColor="blue"  />
-   </>
-  )
+    <>
+      <Header />
+      <CartComponent />
+      <ProductsComponent />
+    </>
+  );
 }
 
-export default App
+export default App;
